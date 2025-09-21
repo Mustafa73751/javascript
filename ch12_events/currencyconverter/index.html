@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Currency Converter</h2>
+    <p>Product Price: <span id="price">10</span> <span id="currency-symbol">$</span></p>
+
+    <label for="currency">Choose currency:</label>
+    <select onchange="changeCountry()" id="currency">
+      <option value="usd" selected>USD ($)</option>
+      <option value="eur">EUR (€)</option>
+      <option value="gbp">GBP (£)</option>
+      <option value="kes">KES (KSh)</option>
+    </select>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

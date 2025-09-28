@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 Examples</title>
+</head>
+<body>
+  <h1>Check the console for ES6 examples</h1>
+  
+  <script>
+    // 1. let and const
+    let age = 16;
+    const name = "Mustafa";
+    age = 17;
+    console.log("1. let & const ->", name, age);
+
+    // 2. Arrow Functions
+    const addArrow = (a, b) => a + b;
+    console.log("2. Arrow Function ->", addArrow(2, 3));
+
+    // 3. Template Literals
+    const year = 2025;
+    console.log(`3. Template Literals -> Hello, my name is ${name} and the year is ${year}.`);
+
+    // 4. Default Parameters
+    function greet(user = "Guest") {
+      return `Hello, ${user}!`;
+    }
+    console.log("4. Default Params ->", greet(), greet("Ali"));
+
+    // 5. Destructuring
+    const person = { name: "Mustafa", age: 16 };
+    const { name: personName, age: personAge } = person;
+    console.log("5a. Object Destructuring ->", personName, personAge);
+
+    const numbers = [1, 2, 3];
+    const [first, second] = numbers;
+    console.log("5b. Array Destructuring ->", first, second);
+
+    // 6. Spread Operator
+    const arr1 = [1, 2, 3];
+    const arr2 = [...arr1, 4, 5];
+    console.log("6a. Spread with Arrays ->", arr2);
+
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { ...obj1, c: 3 };
+    console.log("6b. Spread with Objects ->", obj2);
+
+    // 7. Classes
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      introduce() {
+        console.log(`7. Class -> Hi, I’m ${this.name}, ${this.age} years old.`);
+      }
+    }
+    const mustafa = new Person("Mustafa", 16);
+    mustafa.introduce();
+
+    // 8. Promises
+    const fetchData = new Promise((resolve, reject) => {
+      let success = true;
+      if (success) resolve("8. Promise -> Data loaded!");
+      else reject("8. Promise -> Error loading data");
+    });
+    fetchData.then(result => console.log(result)).catch(error => console.log(error));
+
+    // 9. Async/Await
+    function fakeFetch() {
+      return new Promise(resolve => {
+        setTimeout(() => resolve("9. Async/Await -> Fetched data"), 1000);
+      });
+    }
+    async function getData() {
+      const result = await fakeFetch();
+      console.log(result);
+    }
+    getData();
+
+    // 10. Modules (simulated inline)
+    const add = (a, b) => a + b;
+    const multiply = (a, b) => a * b;
+    console.log("10. Modules ->", add(2, 3), multiply(2, 3));
+
+  </script>
+</body>
+</html>

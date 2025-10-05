@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h1 {
+      font-size: 20px;
+      margin-top: 0;
+    }
+    button {
+      padding: 10px 16px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover { opacity: 0.9; }
+    .btn-apple { background: #34d399; color: white; }
+    .btn-banana { background: #facc15; }
+    .btn-clear { background: #ef4444; color: white; }
+    #output {
+      margin-top: 12px;
+      font-style: italic;
+      color: #374151;
+    }
+    ul { padding-left: 20px; }
+    li { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Shopping Cart 🛒</h1>
+    <button class="btn-apple" id="addApple">Add Apple</button>
+    <button class="btn-banana" id="addBanana">Add Banana</button>
+    <button class="btn-clear" id="clearCart">Clear Cart</button>
+
+    <div id="output">(messages will appear here)</div>
+    <h2>Cart:</h2>
+    <ul id="cart"></ul>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
